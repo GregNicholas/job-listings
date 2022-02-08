@@ -1,0 +1,12 @@
+.card {
+	height: 400px;
+	width: 400px;
+	background: white;
+	margin-bottom: 3rem;
+}
+
+.card_logo {
+	height: 50px;
+	width: 50px;
+	border: 1px solid magenta;
+}
