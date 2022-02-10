@@ -9,8 +9,10 @@ function Card({ job }) {
 	
   return (
     <div className="card">
-      <img className="card_logo" src={`${process.env.PUBLIC_URL}/assets/${logoUrl}`} alt="insure"></img>
-	  <CardInfo job={job}/>
+	  <div className="card_start">
+		  <img className="card_logo" src={`${process.env.PUBLIC_URL}/assets/${logoUrl}`} alt="insure"></img>
+		  <CardInfo job={job}/>
+	  </div>
 	  <CardTags job={job} />
     </div>
   );
