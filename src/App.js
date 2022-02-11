@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import Card from "./components/Card"
 import FilterCard from "./components/FilterCard"
-import './App.css'
+import './styles.css'
 
 function App() {
 	const [jobs, setJobs] = useState([]);
@@ -37,8 +37,11 @@ function App() {
 			<section className={`card_list ${filters.length < 1 ? "list_margin" : ""}`}>
 			  <FilterCard tags={filters} filters={filters} setFilters={setFilters} />
 			  {jobs && jobs.length > 0 && jobs.map(job => {
-				  return (
-					  <Card key={job.id} filters={filters} setFilters={setFilters} job={job}/>
+					const tags = [job.role, job.level, ...job.languages, ...job.tools]
+					const containsFilter = tags.some(t => filters.includes(t))
+				  return (<>
+					  { ((filters.length < 1) || containsFilter) && <Card key={job.id} tags={tags} filters={filters} setFilters={setFilters} job={job}/> }
+						</>
 				  )
 			  })}
 			</section>

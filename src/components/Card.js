@@ -3,7 +3,7 @@ import CardInfo from "./CardInfo"
 import CardTags from "./CardTags"
 import "../styles.css"
 
-function Card({ filters, setFilters, job }) {
+function Card({ filters, setFilters, job, tags }) {
 	const [selected, setSelected] = useState(false)
 	const logoUrl = job.logo.slice(1)
 	
@@ -17,7 +17,7 @@ function Card({ filters, setFilters, job }) {
 		  <img className="card_logo" src={`${process.env.PUBLIC_URL}/assets/${logoUrl}`} alt="insure"></img>
 		  <CardInfo job={job} handleClick={handleClick}/>
 	  </div>
-	  <CardTags filters={filters} setFilters={setFilters} job={job} />
+	  <CardTags tags={tags} filters={filters} setFilters={setFilters} job={job} />
     </div>
   );
 }

@@ -1,7 +1,6 @@
 import React from "react"
 
-function CardTags({ filters, setFilters, job }) {
-  const tags = [job.role, job.level, ...job.languages, ...job.tools]
+function CardTags({ filters, setFilters, job, tags }) {
   
   const handleClick = (e, tag) => {
 	  e.stopPropagation()
