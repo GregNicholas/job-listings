@@ -1,6 +1,6 @@
 import React from "react"
 
-function CardInfo({ job }) {
+function CardInfo({ job, handleClick }) {
 	
   return (
     <div className="card_info">
@@ -9,7 +9,7 @@ function CardInfo({ job }) {
 		{job.new && <span className="highlight highlight_new">NEW!</span>}
 		{job.featured && <span className="highlight highlight_featured">FEATURED</span>}
 	  </div>
-	  <h4 className="title">{job.position}</h4>
+	  <h4 className="title" onClick={handleClick}>{job.position}</h4>
 	  <div className="details">
 		  <span>{job.postedAt}</span><span className="bullet">&bull;</span>
 		  <span>{job.contract}</span><span className="bullet">&bull;</span>

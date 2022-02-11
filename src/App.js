@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react"
 import Card from "./components/Card"
-import './App.css';
+import FilterCard from "./components/FilterCard"
+import './App.css'
 
 function App() {
 	const [jobs, setJobs] = useState([]);
+	const [filters, setFilters] = useState([]);
 	
 	const getJobs=()=>{
     fetch('data.json',{
@@ -31,12 +33,12 @@ function App() {
     <div className="App">
       <header className="app_header">
 	  </header>
-        <h1>LISTINGS</h1>
 		<div className="container">
-			<section className="card_list">
+			<section className={`card_list ${filters.length < 1 ? "list_margin" : ""}`}>
+			  <FilterCard tags={filters} filters={filters} setFilters={setFilters} />
 			  {jobs && jobs.length > 0 && jobs.map(job => {
 				  return (
-					  <Card key={job.id} job={job}/>
+					  <Card key={job.id} filters={filters} setFilters={setFilters} job={job}/>
 				  )
 			  })}
 			</section>

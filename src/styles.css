@@ -10,7 +10,7 @@
 	margin-bottom: 3rem;
 	padding: 0 1.5rem;
 	box-sizing: border-box;
-	border-radius: 7px;
+	border-radius: 6px;
 	box-shadow: 3px 8px 19px hsla(180, 52%, 87%, 1);
 }
 
@@ -54,7 +54,13 @@
 
 .title {
 	font-weight: 700;
+	width: fit-content;
 	margin: 1rem 0;
+	cursor: pointer;
+}
+.title:active {
+	color: hsl(180, 29%, 50%);
+	transform: translateY(2px);
 }
 
 .details {
@@ -77,10 +83,74 @@
 	gap: 1rem;
 }
 
+.tag_list {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	cursor: pointer;
+}
+
 .tag {
 	padding: 10px 10px 5px 10px;
-	border-radius: 3px;
+	border-radius: 4px;
 	background-color: hsl(180, 52%, 96%);
+	cursor: pointer;
+	display: inline-block;
+}
+.tag:active {
+	color: white;
+	background-color: hsl(180, 29%, 50%)
+}
+.tag_list .tag:active {
+	background-color: hsl(180, 52%, 96%);
+	color: hsl(180, 29%, 50%);
+}
+
+.tag_list:active > .tag_x {
+	background: black;
+}
+
+.tag_x {
+	color: white;
+    background: hsl(180, 29%, 50%);
+    font-size: .8rem;
+    padding: 7px 10px 3px 10px;
+    border-radius: 0 4px 4px 0;
+    font-weight: bold;
+}
+
+.card_filter {
+	position: relative;
+    top: -2rem;
+    height: fit-content;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.3rem;
+	margin: 0 0 2rem 0;
+}
+
+.card_filter .card_tags {
+    height: fit-content;
+}
+
+.clear {
+	color: hsl(180, 8%, 52%);
+	font-weight: 700;
+    font-size: .8rem;
+	cursor: pointer;
+}
+.clear:hover {
+	text-decoration: underline;
+	color: hsl(180, 29%, 50%);
+}
+
+.list_margin {
+	margin-top: 3rem;
+}
+
+.selected {
+	border-left: 6px solid hsl(180, 29%, 50%);
 }
 
 @media only screen and (min-width: 850px) {
@@ -88,8 +158,8 @@
 		width: 90%;
 		height: 9rem;
 		margin-bottom: 1.5rem;
-		padding: 2.2rem;
 		display: flex;
+		gap: .5rem;
 		align-items: center;
 		justify-content: space-between;
 	}
@@ -123,7 +193,14 @@
 	  height: 5rem;
 	  align-items: center;
 	}
+	.card_filter {
+	position: relative;
+    top: -2rem;
+    height: fit-content;
+	margin: 0;
+	}
 	.tag {
 	  height: 1rem;
 	}
-	}
+}
+	
