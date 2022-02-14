@@ -46,6 +46,10 @@ function App() {
 			  })}
 			</section>
 		</div>
+		  <div class="attribution">
+			Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noreferrer">Frontend Mentor</a>. 
+			Coded by <a href="https://gregschoenberg.com">Greg Schoenberg</a>.
+		  </div>
     </div>
   );
 }
