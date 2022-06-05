@@ -5,13 +5,18 @@ Built with React, this is my solution to the [Job listings with filtering challe
 ## Table of contents
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
   - [Links](#links)
+  - [The challenge](#the-challenge)
   - [Built with](#built-with)
  
 
 ## Overview
 Using Reactjs, the design is meant to match the given screenshots. Fetching from the data.json file, the page is interactive and filterable.
+
+### Links
+
+- Live Site URL: [Job listings](https://jolly-liskov-d29c51.netlify.app/)
+
 ### The challenge
 
 Users should be able to:
@@ -19,12 +24,6 @@ Users should be able to:
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
 - Filter job listings based on the categories. Jobs shown should have all of the selected filters
-
-
-### Links
-
-- Live Site URL: [Job listings](https://jolly-liskov-d29c51.netlify.app/)
-
 
 ### Built with
 
