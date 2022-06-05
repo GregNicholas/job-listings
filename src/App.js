@@ -38,7 +38,7 @@ function App() {
 			  <FilterCard tags={filters} filters={filters} setFilters={setFilters} />
 			  {jobs && jobs.length > 0 && jobs.map(job => {
 					const tags = [job.role, job.level, ...job.languages, ...job.tools]
-					const containsFilter = tags.some(t => filters.includes(t))
+					const containsFilter = filters.every(f => tags.includes(f))
 				  return (<>
 					  { ((filters.length < 1) || containsFilter) && <Card key={job.id} tags={tags} filters={filters} setFilters={setFilters} job={job}/> }
 						</>
