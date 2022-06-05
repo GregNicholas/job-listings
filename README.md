@@ -15,7 +15,7 @@ Using Reactjs, the design is meant to match the given screenshots. Fetching from
 
 ### Links
 
-- Live Site URL: [Job listings](https://jolly-liskov-d29c51.netlify.app/)
+- Live Site URL: [Job listings](https://job-listings-d29c51.netlify.app/)
 
 ### The challenge
 
